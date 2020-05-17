@@ -17,5 +17,4 @@
         android:id="@+id/edt_date"
         android:gravity="center_horizontal"
       />
-
 </RelativeLayout>
