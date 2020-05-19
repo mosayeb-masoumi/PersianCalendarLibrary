@@ -1,5 +1,12 @@
 # PersianCalendarLibrary
 
+  for android X
+   implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
+   
+  for other APIs  
+   implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0.0'
+
+
    buildscript {
    
     repositories {
@@ -20,9 +27,9 @@
     
   }
   
-   add library:
+ 
    
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0'
+   
     
     how to use:
     
