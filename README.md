@@ -44,7 +44,7 @@ how to create simple dialog:
             public void onDeniedButtonClicked(boolean bool) {
 
             }
-
+           // layout_root is the id that we set in our layout.xml
         }, layout_root);
     }
  
@@ -52,8 +52,6 @@ how to create simple dialog:
 how to create customized dialog:
     
      private void openCalendar() {
-
-        // here we can customize our calendar
         PersianCalendar persianCalendar = new PersianCalendar.Builder()
 
                 .max_year(1405)
@@ -66,22 +64,27 @@ how to create customized dialog:
                 .closeIconVisibility(true)
                 .closeIconBackgroundDrawable(getResources().getDrawable(R.drawable.ic_close))
 
+                // here we can set color or drawable for header,base on need we can choose one these two below lines
                 .headerBackgroundColor(getResources().getColor(R.color.colorAccent))
                 .headerBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_header_shape))
 
+                // here we can set color or drawable for numberPickers,base on need we can choose one these two below lines
                 .dateBackgroundColor(getResources().getColor(R.color.yellow))
                 .dateBackgroundDrawable(getResources().getDrawable(R.drawable.date_background))
-
+                
+                // here we can set color or drawable and other settings for register button
                 .buttonRegisterBackgroundColor(getResources().getColor(R.color.colorAccent))
                 .buttonRegisterBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
                 .buttonRegisterTextColor(getResources().getColor(R.color.blue_dark))
                 .buttonRegisterTextSize(20)
 
+                // here we can set color or drawable and other settings for todayDate button
                 .buttonSetTodayBackgroundColor(getResources().getColor(R.color.colorAccent))
                 .buttonSetTodayBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
                 .buttonSetTodayTextColor(getResources().getColor(R.color.blue_dark))
                 .buttonSetTodayTextSize(20)
 
+                // here we can set color or drawable for dialog,base on need we can choose one these two below lines
                 .dialogBackgroundColor(getResources().getColor(R.color.colorAccent))
                 .dialogBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
 
