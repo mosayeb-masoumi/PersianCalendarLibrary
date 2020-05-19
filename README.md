@@ -3,8 +3,8 @@
     for android X
     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
    
-     for other APIs  
-     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0.0'
+    for other APIs  
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0.0'
 
 
     buildscript {
