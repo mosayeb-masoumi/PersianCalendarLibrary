@@ -1,33 +1,30 @@
 # PersianCalendarLibrary
 
-    for android X
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
    
-    for other APIs  
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0.0'
 
-
-    buildscript {
-    repositories {
+   buildscript {
+   repositories {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
       }
-     }
-
+    }
 
     allprojects {
-   
     repositories {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
      }
-    
     }
   
  
+   for android X
+     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
    
+     for other APIs  
+     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0.0'
+
    
     
     how to use:
