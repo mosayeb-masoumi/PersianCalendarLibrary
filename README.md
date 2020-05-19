@@ -19,7 +19,7 @@
     }
   
  
-   for android X
+     for android X
      implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
    
      for other APIs  
@@ -27,7 +27,7 @@
 
    
     
-    how to use:
+         how to use:
     
          private void openCalendar() {
 
