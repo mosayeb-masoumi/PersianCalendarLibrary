@@ -33,4 +33,6 @@ dependencies {
 
     implementation project(path: ':persiancalendarlibrary')
 
+//    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
+
 }
