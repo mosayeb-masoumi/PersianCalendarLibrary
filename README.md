@@ -1,9 +1,6 @@
 # PersianCalendarLibrary
-
-   
-
-   buildscript {
-   repositories {
+    buildscript {
+    repositories {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
