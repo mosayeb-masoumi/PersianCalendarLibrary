@@ -1,4 +1,7 @@
 # PersianCalendarLibrary
+
+add jitpack to build.gradle(Project)
+
     buildscript {
     repositories {
         google()
@@ -23,9 +26,32 @@ libray:
     for other APIs  
     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0.0'
 
+
+how to create simple dialog:
+   
+    private void openCalendar() {
+     DialogFactory dialogFactory = new DialogFactory(MainActivity.this);
+        dialogFactory.createCalendarDialog(new DialogFactory.DialogFactoryInteraction() {
+            @Override
+            public void onAcceptButtonClicked(String... params) {
+
+                String date = params[0];
+                edt_date.setText(date);
+
+            }
+
+            @Override
+            public void onDeniedButtonClicked(boolean bool) {
+
+            }
+
+        }, layout_root);
+    }
+ 
+ 
    
     
-how to use:
+how to create customized dialog:
     
      private void openCalendar() {
 
