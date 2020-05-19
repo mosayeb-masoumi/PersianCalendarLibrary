@@ -30,7 +30,7 @@ libray:
 how to create simple dialog:
    
     private void openCalendar() {
-     DialogFactory dialogFactory = new DialogFactory(MainActivity.this);
+     DialogFactory dialogFactory = new DialogFactory(context);
         dialogFactory.createCalendarDialog(new DialogFactory.DialogFactoryInteraction() {
             @Override
             public void onAcceptButtonClicked(String... params) {
@@ -49,8 +49,6 @@ how to create simple dialog:
     }
  
  
-   
-    
 how to create customized dialog:
     
      private void openCalendar() {
