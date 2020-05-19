@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Locale;
 
 public class SolarCalendar {
-
     private String strWeekDay = "";
     private String strMonth = "";
     private int date,year;
@@ -22,12 +21,8 @@ public class SolarCalendar {
         calcSolarCalendar(MiladiDate);
     }
 
-
-
     private void calcSolarCalendar(Date MiladiDate) {
-
         int ld;
-
         int miladiYear = MiladiDate.getYear() + 1900;
         int miladiMonth = MiladiDate.getMonth() + 1;
         int miladiDate = MiladiDate.getDate();
@@ -267,7 +262,6 @@ public class SolarCalendar {
 
         return getStrMonth();
     }
-
 
     public String getCurrentShamsiDate(){
         return (getCurrentShamsiYear()+"/"+getCurrentShamsiMonth()+"/"+getCurrentShamsiDay());

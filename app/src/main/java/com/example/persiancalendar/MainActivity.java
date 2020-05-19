@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 
 import com.example.persiancalendarlibrary.DialogFactory;
+import com.example.persiancalendarlibrary.PersianCalendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +33,42 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openCalendar() {
+
+        PersianCalendar persianCalendar = new PersianCalendar.Builder()
+
+                .max_year(1405)
+                .min_year(1395)
+
+                .title("تقویم")
+                .titleTextColor(getResources().getColor(R.color.white))
+                .titleTextSize(20)
+
+                .closeIconVisibility(true)
+                .closeIconBackgroundDrawable(getResources().getDrawable(R.drawable.ic_close))
+
+                .headerBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .headerBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_header_shape))
+
+                .dateBackgroundColor(getResources().getColor(R.color.yellow))
+                .dateBackgroundDrawable(getResources().getDrawable(R.drawable.date_background))
+//
+                .buttonRegisterBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .buttonRegisterBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
+                .buttonRegisterTextColor(getResources().getColor(R.color.blue))
+                .buttonRegisterTextSize(20)
+////
+                .buttonSetTodayBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .buttonSetTodayBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
+                .buttonSetTodayTextColor(getResources().getColor(R.color.blue))
+                .buttonSetTodayTextSize(20)
+//
+                .dialogBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .dialogBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
+
+                .build();
+
+
+
         DialogFactory dialogFactory = new DialogFactory(MainActivity.this);
         dialogFactory.createCalendarDialog(new DialogFactory.DialogFactoryInteraction() {
             @Override
@@ -46,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDeniedButtonClicked(boolean bool) {
 
             }
-        }, layout_root);
+
+        }, layout_root ,persianCalendar);
     }
 }
