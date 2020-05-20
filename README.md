@@ -109,9 +109,12 @@ how to create customized dialog:
         }, layout_root ,persianCalendar);
     }
     
-      simple PersianCalendar image:
+ simple PersianCalendar image:
+ 
+       ![ScreenShot](https://raw.github.com/mosayeb-masoumi/PersianCalendarLibrary/blob/master/app/src/main/res/
+       drawable/simple_persian_calendar.png)
        
- ![ScreenShot](https://raw.github.com/mosayeb-masoumi/PersianCalendarLibrary/blob/master/app/src/main/res/
- drawable/simple_persian_calendar.png)
+       
+       ![Image](simple_persian_calendar.png)
    
    
