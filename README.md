@@ -25,7 +25,7 @@ neede minSdk:
 libray:
 
     for android X
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.1'
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.3'
    
     for other APIs  
     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.2'
