@@ -17,14 +17,18 @@ add jitpack to build.gradle(Project)
         maven { url 'https://jitpack.io' }
      }
     }
+    
+neede minSdk:
+
+     minSdkVersion 18
 
 libray:
 
     for android X
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.1'
    
     for other APIs  
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.0.0'
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
 
 
 how to create simple dialog:
@@ -114,6 +118,8 @@ how to create customized dialog:
  ![customizedPersian Calendar](https://user-images.githubusercontent.com/40134233/82438923-0d38c500-9aaf-11ea-8b25-f9a859cc2127.png)
     
  simple PersianCalendar dialog image:
+ 
+ ![simple_persian_calendar](https://user-images.githubusercontent.com/40134233/82439752-6d7c3680-9ab0-11ea-89ce-65e4a665f43c.png)
  
  
  
