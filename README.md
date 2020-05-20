@@ -17,6 +17,10 @@ add jitpack to build.gradle(Project)
         maven { url 'https://jitpack.io' }
      }
     }
+    
+neede minSdk:
+
+     minSdkVersion 18
 
 libray:
 
