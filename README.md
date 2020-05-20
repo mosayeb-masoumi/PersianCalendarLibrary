@@ -18,17 +18,17 @@ add jitpack to build.gradle(Project)
      }
     }
     
-neede minSdk:
+needed minSdk:
 
      minSdkVersion 18
 
 libray:
 
     for android X
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.3'
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.5'
    
     for other APIs  
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.2'
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.4'
 
 
 how to create simple dialog:
