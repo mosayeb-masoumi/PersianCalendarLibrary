@@ -88,6 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-        }, layout_root,persianCalendar);
+        }, layout_root);
     }
 }
