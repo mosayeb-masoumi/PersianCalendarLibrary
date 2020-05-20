@@ -18,7 +18,7 @@ add jitpack to build.gradle(Project)
      }
     }
     
-neede minSdk:
+needed minSdk:
 
      minSdkVersion 18
 
