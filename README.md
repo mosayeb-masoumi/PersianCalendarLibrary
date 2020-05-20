@@ -28,7 +28,7 @@ libray:
     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.1'
    
     for other APIs  
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.0'
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.2'
 
 
 how to create simple dialog:
