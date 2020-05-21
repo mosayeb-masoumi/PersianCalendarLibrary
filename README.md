@@ -117,8 +117,8 @@ how to create customized dialog:
         setContentView(R.layout.activity_second)
 
         val builder = PersianCalendar.Builder()
-                .max_year(1380)
-                .min_year(1370)
+                .setMax_year(1402)
+                .setMin_year(1398)
                 .build()
         
         openCalendar(builder)
@@ -129,6 +129,9 @@ how to create customized dialog:
         val dialogFactory = DialogFactory(this)
         dialogFactory.createCalendarDialog(object : DialogFactory.DialogFactoryInteraction {
             override fun onAcceptButtonClicked(vararg strings: String?) {
+            
+                 val date: String? = strings.get(0)
+                 text_date.text = date
             }
 
             override fun onDeniedButtonClicked(cancel_dialog: Boolean) {
