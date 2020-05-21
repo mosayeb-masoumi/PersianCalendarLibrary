@@ -24,11 +24,8 @@ needed minSdk:
 
 libray:
 
-    for android X
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.5'
+    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:2.0'
    
-    for other APIs  
-    implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.4'
     
 # implimentation in java
 
@@ -56,53 +53,49 @@ libray:
  
 how to create customized dialog:
     
-     private void openCalendar() {
+    private void openCalendar() {
+
         PersianCalendar persianCalendar = new PersianCalendar.Builder()
 
-                .max_year(1405)
-                .min_year(1395)
+                .setMax_year(1402)
+                .setMin_year(1398)
 
-                .title("تقویم")
-                .titleTextColor(getResources().getColor(R.color.white))
-                .titleTextSize(20)
+                .setTitle("تقویم")
+                .setTitleTextColor(getResources().getColor(R.color.white))
+                .setTitleTextSize(20)
 
-                .closeIconVisibility(true)
-                .closeIconBackgroundDrawable(getResources().getDrawable(R.drawable.ic_close))
+                .setCloseIconVisibility(true)
+                .setCloseIconBackgroundDrawable(getResources().getDrawable(R.drawable.ic_close))
 
-                // here we can set color or drawable for header,base on need we can choose one these two below lines
-                .headerBackgroundColor(getResources().getColor(R.color.colorAccent))
-                .headerBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_header_shape))
+                .setHeaderBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .setHeaderBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_header_shape))
 
-                // here we can set color or drawable for numberPickers,base on need we can choose one these two below lines
-                .dateBackgroundColor(getResources().getColor(R.color.yellow))
-                .dateBackgroundDrawable(getResources().getDrawable(R.drawable.date_background))
-                
-                // here we can set color or drawable and other settings for register button
-                .buttonRegisterBackgroundColor(getResources().getColor(R.color.colorAccent))
-                .buttonRegisterBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
-                .buttonRegisterTextColor(getResources().getColor(R.color.blue_dark))
-                .buttonRegisterTextSize(20)
+                .setDateBackgroundColor(getResources().getColor(R.color.yellow))
+                .setDateBackgroundDrawable(getResources().getDrawable(R.drawable.date_background))
 
-                // here we can set color or drawable and other settings for todayDate button
-                .buttonSetTodayBackgroundColor(getResources().getColor(R.color.colorAccent))
-                .buttonSetTodayBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
-                .buttonSetTodayTextColor(getResources().getColor(R.color.blue_dark))
-                .buttonSetTodayTextSize(20)
+                .setButtonRegisterBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .setButtonRegisterBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
+                .setButtonRegisterTextColor(getResources().getColor(R.color.blue_dark))
+                .setButtonRegisterTextSize(20)
 
-                // here we can set color or drawable for dialog,base on need we can choose one these two below lines
-                .dialogBackgroundColor(getResources().getColor(R.color.colorAccent))
-                .dialogBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
+                .setButtonSetTodayBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .setButtonSetTodayBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
+                .setButtonSetTodayTextColor(getResources().getColor(R.color.blue_dark))
+                .setButtonSetTodayTextSize(20)
+
+                .setDialogBackgroundColor(getResources().getColor(R.color.colorAccent))
+                .setDialogBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_btn_shape))
 
                 .build();
-        
-        
-        DialogFactory dialogFactory = new DialogFactory(context);
+
+
+        DialogFactory dialogFactory = new DialogFactory(MainActivity.this);
         dialogFactory.createCalendarDialog(new DialogFactory.DialogFactoryInteraction() {
             @Override
             public void onAcceptButtonClicked(String... params) {
 
                 String date = params[0];
-                edt_date.setText(date);
+                txt_date.setText(date);
 
             }
 
@@ -110,8 +103,9 @@ how to create customized dialog:
             public void onDeniedButtonClicked(boolean bool) {
 
             }
-           // layout_root is the id that we set in our layout.xml
-        }, layout_root ,persianCalendar);
+
+          // layout_root is the id that we set in our layout.xml
+        }, layout_root,persianCalendar);
     }
     
   # implimentation in kotlin   
@@ -140,7 +134,8 @@ how to create customized dialog:
             override fun onDeniedButtonClicked(cancel_dialog: Boolean) {
 
             }
-
+        
+        // layout_root is the id that we set in our layout.xml
         }, layout_root, builder)
     }
     }
