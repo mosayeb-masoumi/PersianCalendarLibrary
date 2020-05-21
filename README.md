@@ -29,9 +29,10 @@ libray:
    
     for other APIs  
     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:1.1.4'
+    
+# implimentation in java
 
-
-how to create simple dialog:
+ how to create simple dialog:
    
     private void openCalendar() {
      DialogFactory dialogFactory = new DialogFactory(context);
@@ -112,6 +113,40 @@ how to create customized dialog:
            // layout_root is the id that we set in our layout.xml
         }, layout_root ,persianCalendar);
     }
+    
+  # implimentation in kotlin   
+  
+    class SecondActivity : AppCompatActivity() {
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_second)
+
+        val builder = PersianCalendar.Builder()
+                .max_year(1380)
+                .min_year(1370)
+                .build()
+        
+        openCalendar(builder)
+    }
+
+    private fun openCalendar(builder: PersianCalendar) {
+
+        val dialogFactory = DialogFactory(this)
+        dialogFactory.createCalendarDialog(object : DialogFactory.DialogFactoryInteraction {
+            override fun onAcceptButtonClicked(vararg strings: String?) {
+            }
+
+            override fun onDeniedButtonClicked(cancel_dialog: Boolean) {
+
+            }
+
+        }, layout_root, builder)
+    }
+    }
+
+    
+    
     
  customized PersianCalendar dialog image:
  
