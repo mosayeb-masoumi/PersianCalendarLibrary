@@ -27,7 +27,7 @@ libray:
     implementation 'com.github.mosayeb-masoumi:PersianCalendarLibrary:2.0'
    
     
-# implimentation in java
+# implementation in java
 
  how to create simple dialog:
    
@@ -108,7 +108,7 @@ how to create customized dialog:
         }, layout_root,persianCalendar);
     }
     
-  # implimentation in kotlin   
+  # implementation in kotlin   
   
     class SecondActivity : AppCompatActivity() {
     
@@ -119,6 +119,7 @@ how to create customized dialog:
         val builder = PersianCalendar.Builder()
                 .setMax_year(1402)
                 .setMin_year(1398)
+                .// and other optional settings
                 .build()
         
         openCalendar(builder)
