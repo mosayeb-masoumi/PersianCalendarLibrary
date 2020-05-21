@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,16 +127,34 @@ public class DialogFactory {
 
 
 // year --------------------------------------------------
-        List<String> yearList = new ArrayList<>();
-        for (int i = min_year; i <= max_year; i++) {
-            String y = ConvertEnDigitToFa.convert(String.valueOf(i));
-            yearList.add(y);
+        if(min_year<max_year){
+            List<String> yearList = new ArrayList<>();
+            for (int i = min_year; i <= max_year; i++) {
+                String y = ConvertEnDigitToFa.convert(String.valueOf(i));
+                yearList.add(y);
+            }
+
+            String[] strYearList = new String[yearList.size()];
+            strYearList = yearList.toArray(strYearList);
+
+            np_year.setDisplayedValues(strYearList);
+        }else{
+            min_year = year -50;
+            max_year = year +50;
+            List<String> yearList = new ArrayList<>();
+            for (int i = min_year; i <= max_year; i++) {
+                String y = ConvertEnDigitToFa.convert(String.valueOf(i));
+                yearList.add(y);
+            }
+
+            String[] strYearList = new String[yearList.size()];
+            strYearList = yearList.toArray(strYearList);
+
+            np_year.setDisplayedValues(strYearList);
+
+            Toast.makeText(context, "مینیمم سال نباید بیشتر از ماکزیمم سال باشد.", Toast.LENGTH_SHORT).show();
         }
 
-        String[] strYearList = new String[yearList.size()];
-        strYearList = yearList.toArray(strYearList);
-
-        np_year.setDisplayedValues(strYearList);
 
 // month --------------------------------------------------------
         int min_month = 1;
